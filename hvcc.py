@@ -181,6 +181,14 @@ def compile_dataflow(in_path, out_dir, patch_name=None,
         patch_name = hvir["name"]["escaped"]
         externs = generate_extern_info(hvir, results)
 
+        # display externs info
+        if verbose:
+            print "\n=== Extern info ===\n{0}\n".format(json.dumps(
+                externs,
+                sort_keys=True,
+                indent=2,
+                separators=(',', ': ')))
+
         c_src_dir = os.path.join(out_dir, "c")
         results["ir2c"] = ir2c.ir2c.compile(
             hv_ir_path=os.path.join(results["hv2ir"]["out_dir"], results["hv2ir"]["out_file"]),

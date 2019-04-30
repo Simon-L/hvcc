@@ -296,7 +296,8 @@ class ir2c:
             "out_dir": output_dir,
             "out_file": "",
             "compile_time": (time.time() - tick),
-            "obj_counter": ir_counter
+            "obj_counter": ir_counter,
+            "externs": externs
         }
 
 def main():
