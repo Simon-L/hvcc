@@ -15,7 +15,9 @@
 
 import argparse
 import json
+import sys
 
+sys.path.append("../")
 import core.hv2ir.HeavyLangObject as HeavyLangObject
 
 def main():

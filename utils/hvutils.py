@@ -15,7 +15,9 @@
 
 import argparse
 import json
+import sys
 
+sys.path.append("../")
 import interpreters.pd2hv.PdParser as PdParser
 
 def main():
